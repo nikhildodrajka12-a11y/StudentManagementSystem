@@ -1,0 +1,425 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #1d2939;
+  background: #f5f7fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.app-shell {
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 5%;
+}
+
+.topbar {
+  min-height: 76px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e6eaf0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #182230;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: 21px;
+}
+
+.brand > span:last-child {
+  color: #6476dc;
+  margin-left: -8px;
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 11px;
+  background: #6375dd;
+  color: white;
+}
+
+.topbar-label,
+.eyebrow {
+  color: #7c8799;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.hero {
+  padding: 42px 0 25px;
+}
+
+.hero h1 {
+  margin: 10px 0;
+  font: 800 clamp(26px, 3vw, 38px) "Manrope", sans-serif;
+  letter-spacing: -1.4px;
+}
+
+.hero p {
+  color: #748094;
+  margin: 0;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+  margin-bottom: 25px;
+}
+
+.stat-card,
+.panel {
+  background: #fff;
+  border: 1px solid #e8edf3;
+  border-radius: 16px;
+  box-shadow: 0 5px 22px #172b4d06;
+}
+
+.stat-card {
+  padding: 21px 24px;
+}
+
+.stat-card span {
+  display: block;
+  color: #788397;
+  font-size: 13px;
+}
+
+.stat-card strong {
+  display: block;
+  margin-top: 8px;
+  font: 800 29px "Manrope", sans-serif;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.5fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.panel {
+  padding: 25px;
+  min-width: 0;
+}
+
+.panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 23px;
+}
+
+.panel-heading h2 {
+  margin: 6px 0 0;
+  font: 700 21px "Manrope", sans-serif;
+}
+
+.heading-icon {
+  display: grid;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  border-radius: 12px;
+  background: #eef0ff;
+  color: #596bd4;
+  font-size: 25px;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 17px;
+  color: #39465a;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+form input,
+form select,
+.search-input {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 13px;
+  border: 1px solid #e1e6ef;
+  border-radius: 9px;
+  background: #fff;
+  color: #273449;
+  outline: none;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+form input:focus,
+form select:focus,
+.search-input:focus {
+  border-color: #7383e7;
+  box-shadow: 0 0 0 3px #7383e71a;
+}
+
+form input::placeholder,
+.search-input::placeholder {
+  color: #a1aaba;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 12px 16px;
+  border-radius: 9px;
+  border: 0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.primary-btn {
+  background: #6375dd;
+  color: #fff;
+  flex: 1;
+}
+
+.primary-btn:hover {
+  background: #5265ce;
+}
+
+.secondary-btn {
+  background: #eef1f6;
+  color: #445066;
+}
+
+.count-pill {
+  padding: 7px 10px;
+  border-radius: 8px;
+  background: #eef0ff;
+  color: #5b6bd0;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.search-input {
+  margin-bottom: 19px;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 12px;
+}
+
+th {
+  padding: 12px 9px;
+  background: #f7f8fc;
+  color: #7c8799;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+td {
+  padding: 15px 9px;
+  border-bottom: 1px solid #edf0f5;
+  vertical-align: top;
+}
+
+td strong {
+  display: block;
+  color: #263349;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.student-sub {
+  display: block;
+  margin-top: 5px;
+  color: #8792a4;
+  font-size: 10px;
+  overflow-wrap: anywhere;
+}
+
+.row-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.edit-btn,
+.delete-btn,
+.refresh-btn {
+  padding: 7px 9px;
+  border-radius: 7px;
+  border: 1px solid #e5e9f0;
+  background: #fff;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.edit-btn {
+  color: #596bd4;
+}
+
+.delete-btn {
+  color: #d44854;
+}
+
+.refresh-btn {
+  margin-top: 19px;
+  color: #5363c9;
+  background: #f6f7ff;
+  border-color: #e8eaff;
+}
+
+.empty-state {
+  padding: 34px 10px;
+  text-align: center;
+  color: #8490a3;
+  font-size: 13px;
+}
+
+.notice {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 16px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.notice-success {
+  background: #eaf8f0;
+  color: #20734b;
+}
+
+.notice-error {
+  background: #fff0f0;
+  color: #b42332;
+}
+
+.notice-close {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 18px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 27px 0;
+  margin-top: 12px;
+  color: #8a94a5;
+  font-size: 11px;
+}
+
+@media (max-width: 900px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-shell {
+    padding: 0 17px;
+  }
+
+  .topbar {
+    min-height: 64px;
+  }
+
+  .topbar-label {
+    max-width: 110px;
+    text-align: right;
+    font-size: 8px;
+  }
+
+  .hero {
+    padding-top: 30px;
+  }
+
+  .stats {
+    gap: 9px;
+  }
+
+  .stat-card {
+    padding: 15px 11px;
+  }
+
+  .stat-card span {
+    font-size: 10px;
+  }
+
+  .stat-card strong {
+    font-size: 23px;
+  }
+
+  .panel {
+    padding: 17px 13px;
+    border-radius: 13px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}
